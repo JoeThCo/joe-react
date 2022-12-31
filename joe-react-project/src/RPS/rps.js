@@ -1,6 +1,8 @@
 import { useState } from "react";
+import "./rps.css";
 
 export function RPS() {
+  document.title = "RPS";
   const rock = "Rock";
   const paper = "Paper";
   const scissors = "Scissors";
@@ -9,13 +11,15 @@ export function RPS() {
   const [loses, setLoses] = useState(0);
   const [ties, setTies] = useState(0);
 
-  //strings can be derived from state
-  const [choices, setChoices] = useState("You: ? vs CPU: ?");
+  const [result, setResult] = useState("");
+
+  const [playerChoice, setPlayerChoice] = useState("?");
+  const [cpuChoice, setCpuChoice] = useState("?");
 
   function onPlayerGuess(playerChoice) {
-    let cpuChoice = cpuGuess();
+    setCpuChoice(cpuGuess());
+    setPlayerChoice(playerChoice);
 
-    setChoices(`You: ${playerChoice} vs CPU: ${cpuChoice}`);
     console.log(playerChoice + " vs " + cpuChoice);
 
     if (playerChoice !== cpuChoice) {
@@ -45,19 +49,23 @@ export function RPS() {
 
   function onWin() {
     setWins((cur) => cur + 1);
+    setResult("You Won!");
   }
   function onLose() {
     setLoses((cur) => cur + 1);
+    setResult("You Lost!");
   }
 
   function onTie() {
     setTies((cur) => cur + 1);
+    setResult("You Tied!");
   }
 
   function resetRecord() {
     setWins(0);
     setLoses(0);
     setTies(0);
+    setResult("");
   }
 
   function cpuGuess() {
@@ -76,13 +84,20 @@ export function RPS() {
 
   return (
     <div>
-      <h1>Rock Paper Scissors</h1>
-      <button onClick={() => onPlayerGuess(rock)}>{rock}</button>
-      <button onClick={() => onPlayerGuess(paper)}>{paper}</button>
-      <button onClick={() => onPlayerGuess(scissors)}>{scissors}</button>
-      <h2>{choices}</h2>
-      <h3>{`${wins}W - ${loses}L - ${ties}T`}</h3>
-      <button onClick={() => resetRecord()}>Reset Record</button>
+      <section>
+        <h1>Rock Paper Scissors</h1>
+        <button onClick={() => onPlayerGuess(rock)}>{rock}</button>
+        <button onClick={() => onPlayerGuess(paper)}>{paper}</button>
+        <button onClick={() => onPlayerGuess(scissors)}>{scissors}</button>
+        <h2>
+          {playerChoice} vs {cpuChoice}
+        </h2>
+        <h2>{result}</h2>
+        <h3>{`${wins}W - ${loses}L - ${ties}T`}</h3>
+        <div className="reset">
+          <button onClick={() => resetRecord()}>Reset Record</button>
+        </div>
+      </section>
     </div>
   );
 }

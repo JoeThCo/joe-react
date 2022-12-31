@@ -1,0 +1,19 @@
+button {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  text-align: center;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.reset button {
+  background-color: red;
+}
+
+.reset button:hover {
+  background-color: lightcoral;
+}
