@@ -90,16 +90,18 @@ export function RPS() {
   return (
     <div>
       <h1>Rock Paper Scissors</h1>
-      <button onClick={() => onPlayerGuess(rock)}>{rock}</button>
-      <button onClick={() => onPlayerGuess(paper)}>{paper}</button>
-      <button onClick={() => onPlayerGuess(scissors)}>{scissors}</button>
+      <div className="grid-container">
+        <button onClick={() => onPlayerGuess(rock)}>{rock}</button>
+        <button onClick={() => onPlayerGuess(paper)}>{paper}</button>
+        <button onClick={() => onPlayerGuess(scissors)}>{scissors}</button>
+      </div>
       <h2>
         {playerChoice} vs {cpuChoice}
       </h2>
       <h2>Last Result: {result}</h2>
       <h3>{`${wins}W - ${loses}L - ${ties}T`}</h3>
       <div className="reset">
-        <button onClick={() => resetRecord()}>Reset Record</button>
+        <button onClick={() => resetRecord()}>Reset</button>
       </div>
     </div>
   );
