@@ -5,18 +5,17 @@ button {
   transition: all 0.15s ease-in-out;
   text-align: center;
   height: 150%;
-  background-color: lightslategray;
+  background-color: white;
   font-size: larger;
   font-family: "Times New Roman", Times, serif;
 }
 
 button:hover {
-  background-color: darkgray;
   transform: scale(1.05);
 }
 
 button:active {
-  background-color: gainsboro;
+  transform: scale(1.25);
 }
 
 .reset button {
@@ -59,4 +58,15 @@ h2 {
 h3 {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+}
+h5 {
+  margin: 15%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.choices {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2.5%;
 }

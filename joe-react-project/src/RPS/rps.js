@@ -87,22 +87,38 @@ export function RPS() {
     }
   }
 
+  /* <div className="grid-container">
+        <Choice onClick={onPlayerGuess} whatChoice={rock} />
+        <Choice onClick={onPlayerGuess} whatChoice={paper} />
+        <Choice onClick={onPlayerGuess} whatChoice={scissors} />
+      </div> */
+  /* <div className="grid-container">
+        {[rock, paper, scissors].map((value) => (
+          <Choice onClick={onPlayerGuess} whatChoice={value} />
+        ))}
+      </div> */
+
   return (
     <div>
       <h1>Rock Paper Scissors</h1>
-      <div className="grid-container">
-        <button onClick={() => onPlayerGuess(rock)}>{rock}</button>
-        <button onClick={() => onPlayerGuess(paper)}>{paper}</button>
-        <button onClick={() => onPlayerGuess(scissors)}>{scissors}</button>
+      <div>
+        <div className="choices">
+          {[rock, paper, scissors].map((value) => (
+            <button onClick={() => onPlayerGuess(value)}>
+              <img src={`${value}.jpg`} alt={`${value}`}></img>
+            </button>
+          ))}
+        </div>
+        <h2>
+          {playerChoice} vs {cpuChoice}
+        </h2>
+        <h2>Last Result: {result}</h2>
+        <h3>{`${wins}W - ${loses}L - ${ties}T`}</h3>
+        <div className="reset">
+          <button onClick={() => resetRecord()}>Reset Record</button>
+        </div>
       </div>
-      <h2>
-        {playerChoice} vs {cpuChoice}
-      </h2>
-      <h2>Last Result: {result}</h2>
-      <h3>{`${wins}W - ${loses}L - ${ties}T`}</h3>
-      <div className="reset">
-        <button onClick={() => resetRecord()}>Reset Record</button>
-      </div>
+      <h5>Made by Joe Colley</h5>
     </div>
   );
 }
