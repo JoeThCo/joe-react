@@ -1,14 +1,22 @@
 button {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.15s ease-in-out;
   text-align: center;
   height: 150%;
+  background-color: lightslategray;
+  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
 }
 
 button:hover {
-  transform: scale(1.1);
+  background-color: darkgray;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: gainsboro;
 }
 
 .reset button {
@@ -16,29 +24,39 @@ button:hover {
   height: 20px;
   position: relative;
   margin: -20px -50px;
-  width: 100px;
   top: 50%;
   left: 50%;
+
+  width: 100px;
+  height: 200%;
 }
 
 .reset button:hover {
   background-color: lightcoral;
 }
+.reset button:active {
+  background-color: darkred;
+}
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template: auto / auto auto auto;
   padding: 10px;
   width: auto;
 }
 
 h1 {
+  margin: 1%;
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
+
 h2 {
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
 h3 {
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }

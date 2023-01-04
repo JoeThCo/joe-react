@@ -101,7 +101,7 @@ export function RPS() {
       <h2>Last Result: {result}</h2>
       <h3>{`${wins}W - ${loses}L - ${ties}T`}</h3>
       <div className="reset">
-        <button onClick={() => resetRecord()}>Reset</button>
+        <button onClick={() => resetRecord()}>Reset Record</button>
       </div>
     </div>
   );
