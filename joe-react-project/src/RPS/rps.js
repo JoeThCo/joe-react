@@ -87,26 +87,13 @@ export function RPS() {
     }
   }
 
-  /* <div className="grid-container">
-        <Choice onClick={onPlayerGuess} whatChoice={rock} />
-        <Choice onClick={onPlayerGuess} whatChoice={paper} />
-        <Choice onClick={onPlayerGuess} whatChoice={scissors} />
-      </div> */
-  /* <div className="grid-container">
-        {[rock, paper, scissors].map((value) => (
-          <Choice onClick={onPlayerGuess} whatChoice={value} />
-        ))}
-      </div> */
-
   return (
     <div>
       <h1>Rock Paper Scissors</h1>
       <div>
         <div className="choices">
           {[rock, paper, scissors].map((value) => (
-            <button onClick={() => onPlayerGuess(value)}>
-              <img src={`${value}.jpg`} alt={`${value}`}></img>
-            </button>
+            <button onClick={() => onPlayerGuess(value)} className={`${value}`}>{`${value}`}</button>
           ))}
         </div>
         <h2>
