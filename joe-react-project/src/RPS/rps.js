@@ -105,8 +105,7 @@ export function RPS() {
           <button onClick={() => resetRecord()}>Reset Record</button>
         </div>
       </div>
-      <h5>Made by Joe Colley</h5>
-      <h2>Penis lol.</h2>
+      <h5>Made by Joe Colley (Penis lol)</h5>
     </div>
   );
 }
