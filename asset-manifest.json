@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/joe-react/static/css/main.dcdf8f68.css",
-    "main.js": "/joe-react/static/js/main.dc53270c.js",
+    "main.js": "/joe-react/static/js/main.55407a9b.js",
     "index.html": "/joe-react/index.html",
     "main.dcdf8f68.css.map": "/joe-react/static/css/main.dcdf8f68.css.map",
-    "main.dc53270c.js.map": "/joe-react/static/js/main.dc53270c.js.map"
+    "main.55407a9b.js.map": "/joe-react/static/js/main.55407a9b.js.map"
   },
   "entrypoints": [
     "static/css/main.dcdf8f68.css",
-    "static/js/main.dc53270c.js"
+    "static/js/main.55407a9b.js"
   ]
 }
