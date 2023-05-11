@@ -106,6 +106,7 @@ export function RPS() {
         </div>
       </div>
       <h5>Made by Joe Colley</h5>
+      <h2>Penis lol.</h2>
     </div>
   );
 }
